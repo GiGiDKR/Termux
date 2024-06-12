@@ -1,43 +1,63 @@
 # Termux
 ## 🏁 First steps <a name=first-steps></a>
+#### Install packages
+```
+pkg update -y
+pkg install root-repo x11-repo -y
+pkg upgrade -y
+```
+```
+pkg install wget git micro python fish -y
+```
+```
+pip install qobuz-dl
+```
+```
+fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
+fish -c "fisher install IlanCosman/tide@v6"
+```
+```
+termux-setup-storage
+```
+```
+echo -e "allow-external-apps = true\nuse-black-ui = true\nbell-character = ignore\n" > ~/.termux/termux.properties
+```
+
+
 #### Install proot-disto
 
-1. Open Termux
-2. Install proot-distro  
 ```
 pkg update
 pkg install proot-distro
 ```
-3. Install Debian (or the distor you prefer)
+Install Debian (or the distor you prefer)
 ```
 proot-distro install debian
 ```
-4 Log in to the distro 
+Log in to the distro 
 ```
 proot-distro login debian
 ```
 
 #### Create an user with sudo privileges
 
-The steps are described in the video linked in the previous point. 
-
-1. Install needed packages
+Install needed packages
 ```
 apt update -y
 apt install sudo micro adduser -y
 ```
-2. Create an user
+Create an user
 ```
 adduser debian
 ```
-3. Give the user sudo privileges
+Give the user sudo privileges
 ```
 micro /etc/sudoers
 
 # Add the following line to the file
 debian ALL=(ALL:ALL) ALL
 ```
-4. Check you can execute sudo commands (it should return `root`)
+Check you can execute sudo commands (it should return `root`)
 ```
 sudo whoami 
 ```  
