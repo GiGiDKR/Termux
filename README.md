@@ -1,6 +1,6 @@
 # Termux
 ## 🏁 First steps <a name=first-steps></a>
-### Install proot-disto
+#### Install proot-disto
 
 1. Open Termux
 2. Install proot-distro  
@@ -17,7 +17,7 @@ proot-distro install debian
 proot-distro login debian
 ```
 
-### Create an user with sudo privileges
+#### Create an user with sudo privileges
 
 The steps are described in the video linked in the previous point. 
 
@@ -44,15 +44,14 @@ sudo whoami
 
 </details>  
 
-# ⚙️ Installing Desktops <a name=installing-desktops></a> 
+## ⚙️ Installing Desktops <a name=installing-desktops></a> 
 
-# Commands: 
 
 ```
 proot-distro login debian --user debian
 ```
 ```
-sudo apt install xfce4
+sudo apt install xfce4 xfce4-terminal
 ```
 
 ## 💻 Running the Desktops for use with Termux X11 <a name=running-desktops></a>
@@ -116,3 +115,26 @@ plank --preferences
 * Install Conky (desktop widgets)
 ```
 sudo apt install conky-all
+```
+## Pycharm <a name=pycharm></a>
+
+* Install Java
+```
+sudo apt install openjdk-17-jdk
+```
+* Install Python
+```
+sudo apt install python3-full
+```
+* Download and install Pycharm
+```
+wget https://download.jetbrains.com/python/pycharm-community-2024.1.3-aarch64.tar.gz
+```
+```
+tar -xf pycharm-community-2024.1.3-aarch64.tar.gz
+```
+* Run Pycharm
+```
+cd pycharm-community-2024.1.3/bin
+bash pycharm.sh
+```
