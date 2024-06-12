@@ -28,14 +28,14 @@ apt install sudo micro adduser -y
 ```
 2. Create an user
 ```
-adduser droidmaster
+adduser debian
 ```
 3. Give the user sudo privileges
 ```
 micro /etc/sudoers
 
 # Add the following line to the file
-droidmaster ALL=(ALL:ALL) ALL
+debian ALL=(ALL:ALL) ALL
 ```
 4. Check you can execute sudo commands (it should return `root`)
 ```
@@ -49,7 +49,7 @@ sudo whoami
 # Commands: 
 
 ```
-proot-distro login debian --user droidmaster
+proot-distro login debian --user debian
 ```
 ```
 sudo apt install xfce4
