@@ -118,6 +118,14 @@ cp ~/./startxfce4_debian.sh > $PREFIX/bin/debian && chmod +x $PREFIX/bin/debian
 ```
 Create shortcut Debian 
 ```
+mkdir -p /data/data/com.termux/files/home/.shortcuts
+chmod 700 -R /data/data/com.termux/files/home/.shortcuts
+```
+```
+mkdir -p /data/data/com.termux/files/home/.shortcuts/icons
+chmod -R a-x,u=rwX,go-rwx /data/data/com.termux/files/home/.shortcuts/icons
+```
+```
 cp ~/./startxfce4_debian.sh ~/.shortcuts/Debian.sh
 wget https://github.com/GiGiDKR/Termux/blob/main/Debian.sh.png
 cp ~/Debian.sh.png ~/.shortcuts/icons
