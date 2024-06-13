@@ -164,6 +164,15 @@ plank --preferences
 ```
 sudo apt install conky-all
 ```
+
+<details>
+<summary><strong>One command</summary></strong></summary>
+  
+```
+sudo apt install xfce4-whiskermenu-plugin mugshot moka-icon-theme numix-gtk-theme greybird-gtk-theme plank conky-all -y
+```
+</details>
+
 ## Pycharm <a name=pycharm></a>
 
 * Install Java
