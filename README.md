@@ -171,6 +171,7 @@ Don't worry about warnings and let Termux run the command in background then ope
 
 Note that dbus-launch does not work for some users so you have to do this instead :-
 ```
-echo 'termux-x11 :1 -xstartup "xfce4-session"' > $PREFIX/bin/start-termux-x11 && chmod +x $PREFIX/bin/start-termux-x11
+echo '#!/data/data/com.termux/files/usr/bin/bash\n# Kill open X11 processes\nkill -9 $(pgrep -f "termux.x11") 2>/dev/null\n\n# Enable PulseAudio over Network\npulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1\n\n# Prepare termux-x11 session\nexport XDG_RUNTIME_DIR=${TMPDIR}\ntermux-x11 :0 >/dev/null &\n\n# Wait a bit until termux-x11 gets started.\nsleep 3\n\n# Launch Termux X11 main activity\nam start --user 0 -n com.termux.x11/com.termux.x11.MainActivity > /dev/null 2>&1vsleep 1\n\nproot-distro login debian --shared-tmp -- /bin/bash -c  'export PULSE_SERVER=127.0.0.1 && export XDG_RUNTIME_DIR=${TMPDIR} && su - droidmaster -c "env DISPLAY=:0 startlxde"'\n\nexit 0\n
+' > $PREFIX/bin/debian && chmod +x $PREFIX/bin/debian
 ```
 And you will be able to start Termux:x11 with start-termux-x11 command.
