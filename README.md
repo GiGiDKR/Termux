@@ -158,3 +158,19 @@ tar -xf pycharm-community-2024.1.3-aarch64.tar.gz
 cd pycharm-community-2024.1.3/bin
 bash pycharm.sh
 ```
+
+WIP :
+```
+echo 'termux-x11 :1 -xstartup "dbus-launch --exit-with-session xfce4-session"' > $PREFIX/bin/start-termux-x11 && chmod +x $PREFIX/bin/start-termux-x11
+```
+Now you can start Termux:x11 by running this command :-
+```
+start-termux-x11
+```
+Don't worry about warnings and let Termux run the command in background then open Termux:11 app and give it some time to load and Voilà !!!
+
+Note that dbus-launch does not work for some users so you have to do this instead :-
+```
+echo 'termux-x11 :1 -xstartup "xfce4-session"' > $PREFIX/bin/start-termux-x11 && chmod +x $PREFIX/bin/start-termux-x11
+```
+And you will be able to start Termux:x11 with start-termux-x11 command.
