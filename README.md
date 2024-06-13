@@ -206,7 +206,7 @@ bash pycharm.sh
 ```
 * Create desktop lancer
 ```
-echo -e "[Desktop Entry]\nVersion=1.0\nType=Application\nName=Pycharm\nComment=\nExec=bash pycharm.sh\nIcon=pycharm\nPath=/home/debian/pycharm-community-2024.1.3/bin\nTerminal=false\nStartupNotify=false" > ~/debian/Desktop/PyCharm.desktop
+echo -e "[Desktop Entry]\nVersion=1.0\nType=Application\nName=Pycharm\nComment=\nExec=bash pycharm.sh\nIcon=pycharm\nPath=/home/debian/pycharm-community-2024.1.3/bin\nTerminal=false\nStartupNotify=false" > ~/Desktop/PyCharm.desktop
 ```
 
 
