@@ -24,6 +24,9 @@ chsh -s fish
 fish -c "set -U fish_greeting"
 ```
 ```
+rm /data/user/0/com.termux/files/usr/etc/mot
+```
+```
 termux-setup-storage
 ```
 ```
