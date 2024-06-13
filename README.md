@@ -7,6 +7,12 @@ pkg install root-repo x11-repo -y
 pkg upgrade -y
 ```
 ```
+termux-setup-storage
+```
+```
+echo -e "allow-external-apps = true\nuse-black-ui = true\nbell-character = ignore\n" > ~/.termux/termux.properties
+```
+```
 pkg install wget git micro python fish -y
 ```
 ```
@@ -22,23 +28,17 @@ chsh -s fish
 ```
 ```
 fish -c "set -U fish_greeting"
-```if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
-
-abbr -a l ls
-abbr -a q exit
-abbr -a c clear
-abbr -a ls ls -la
+```
+```
+echo -e "if status is-interactive\n# Commands to run in interactive sessions can go here\end\n\nabbr -a l ls\nabbr -a q exit\nabbr -a c clear\nabbr -a ls ls -la\n" > ~/.config/fish/config.fish
+```
 ```
 rm /data/user/0/com.termux/files/usr/etc/mot
 ```
 ```
-termux-setup-storage
+fish -c "tide configure"
 ```
-```
-echo -e "allow-external-apps = true\nuse-black-ui = true\nbell-character = ignore\n" > ~/.termux/termux.properties
-```
+
 
 
 #### Install proot-disto
