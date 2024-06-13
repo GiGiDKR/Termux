@@ -17,6 +17,13 @@ fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/fun
 fish -c "fisher install IlanCosman/tide@v6"
 ```
 ```
+echo fish | sudo tee -a /etc/shells
+chsh -s fish
+```
+```
+fish -c "set -U fish_greeting"
+```
+```
 termux-setup-storage
 ```
 ```
