@@ -53,8 +53,9 @@ adduser debian
 Give the user sudo privileges
 ```
 micro /etc/sudoers
-
-# Add the following line to the file
+```
+Add the following line to the file
+```
 debian ALL=(ALL:ALL) ALL
 ```
 Check you can execute sudo commands (it should return `root`)
@@ -94,7 +95,7 @@ wget https://github.com/GiGiDKR/Termux/blob/main/scripts/proot_debian/startxfce4
 chmod +x startxfce4_debian.sh
 ./startxfce4_debian.sh
 ```
-Start Debian with debian command :
+Start Debian with debian command
 ```
 cp ~/./startxfce4_debian.sh > $PREFIX/bin/debian && chmod +x $PREFIX/bin/debian
 ```
