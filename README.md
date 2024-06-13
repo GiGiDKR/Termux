@@ -116,6 +116,12 @@ Start Debian with debian command
 ```
 cp ~/./startxfce4_debian.sh > $PREFIX/bin/debian && chmod +x $PREFIX/bin/debian
 ```
+Create shortcut Debian 
+```
+cp ~/./startxfce4_debian.sh ~/.shortcuts/Debian.sh
+wget https://github.com/GiGiDKR/Termux/blob/main/Debian.sh.png
+cp ~/Debian.sh.png ~/.shortcuts/icons
+```
 
 ## 🎨 Customizations <a name=customizations></a>
 
