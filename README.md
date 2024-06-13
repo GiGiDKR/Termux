@@ -30,7 +30,7 @@ chsh -s fish
 fish -c "set -U fish_greeting"
 ```
 ```
-echo -e "if status is-interactive\n# Commands to run in interactive sessions can go here\end\n\nabbr -a l ls\nabbr -a q exit\nabbr -a c clear\nabbr -a ls ls -la\n" > ~/.config/fish/config.fish
+echo -e "if status is-interactive\n# Commands to run in interactive sessions can go here\nend\n\nabbr -a l ls\nabbr -a q exit\nabbr -a c clear\nabbr -a ls ls -la\n" > ~/.config/fish/config.fish
 ```
 ```
 rm /data/user/0/com.termux/files/usr/etc/mot
