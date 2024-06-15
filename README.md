@@ -114,7 +114,7 @@ chmod +x startxfce4_debian.sh
 ```
 Start Debian with debian command
 ```
-cp ~/./startxfce4_debian.sh > $PREFIX/bin/debian && chmod +x $PREFIX/bin/debian
+cp ~/startxfce4_debian.sh $PREFIX/bin/debian && chmod +x $PREFIX/bin/debian
 ```
 Create shortcut Debian 
 ```
