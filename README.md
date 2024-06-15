@@ -122,7 +122,7 @@ mkdir -p /data/data/com.termux/files/home/.shortcuts
 chmod 700 -R /data/data/com.termux/files/home/.shortcuts
 ```
 ```
-cp ~/./startxfce4_debian.sh ~/.shortcuts/Debian.sh
+cp ~/startxfce4_debian.sh ~/.shortcuts/Debian.sh
 ```
 
 ## 🎨 Customizations <a name=customizations></a>
