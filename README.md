@@ -23,7 +23,7 @@ fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/fun
 fish -c "fisher install IlanCosman/tide@v6"
 ```
 ```
-echo fish | sudo tee -a /etc/shells
+echo fish | tee -a /etc/shells
 chsh -s fish
 ```
 ```
@@ -33,7 +33,7 @@ fish -c "set -U fish_greeting"
 echo -e "if status is-interactive\n# Commands to run in interactive sessions can go here\nend\n\nabbr -a l ls\nabbr -a q exit\nabbr -a c clear\nabbr -a ls ls -la\n" > ~/.config/fish/config.fish
 ```
 ```
-rm /data/user/0/com.termux/files/usr/etc/mot
+rm /data/user/0/com.termux/files/usr/etc/motd
 ```
 ```
 fish -c "tide configure"
