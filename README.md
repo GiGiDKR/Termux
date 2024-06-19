@@ -1,4 +1,20 @@
 # Termux
+
+<details>
+<summary><strong> Interactive installation  </strong></summary>
+
+<br>
+
+```
+pkg update -y ; pkg install wget -y ; wget https://raw.githubusercontent.com//GiGiDKR/Termux/main/TermuxSetup.sh ; bash TermuxSetup.sh 
+
+```
+</details>
+
+****
+
+<strong> Manual installation  </strong>
+
 ## 🏁 First steps <a name=first-steps></a>
 #### Install packages
 ```
