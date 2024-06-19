@@ -89,7 +89,6 @@ sudo whoami
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_ubuntu/startgnome_ubuntu.sh
 ```
 
----  
 <br>
 
 ## ⚙️ Installing Desktops <a name=installing-desktops></a> 
