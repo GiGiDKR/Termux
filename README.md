@@ -1,4 +1,4 @@
-# Termux
+5# Termux
 ## 🏁 First steps <a name=first-steps></a>
 #### Install packages
 ```
@@ -257,66 +257,3 @@ bash pycharm.sh
 ```
 echo -e "[Desktop Entry]\nVersion=1.0\nType=Application\nName=Pycharm\nComment=\nExec=bash pycharm.sh\nIcon=pycharm\nPath=/home/debian/pycharm-community-2024.1.3/bin\nTerminal=false\nStartupNotify=false" > ~/Desktop/PyCharm.desktop
 ```
-
-
-
-# 📚 Index
-
-## PROOT-DISTRO (🟠 UBUNTU)
-* 🏁 [First steps](#first-steps-ubuntu-proot)
-* ⬇️ [Download scripts to run the desktops](#easy-download-ubuntu-proot)
-* ⚙️ [Installing Desktops](#installing-desktops-ubuntu-proot)
-
-<br>
-
----  
----  
-
-<br>
-
-## 🏁 First steps <a name=first-steps-ubuntu-proot></a>
-
-> [!NOTE]  
-> All the process is described in more detail in this [video](https://www.youtube.com/watch?v=_vxhzSG2zVQ).
-
-First you need to install the following packages in Termux: 
-```
-pkg update
-pkg install x11-repo
-pkg install termux-x11-nightly
-pkg install pulseaudio
-pkg install proot-distro
-```
-
-Then install Ubuntu and login once it finishes: 
-```
-proot-distro install ubuntu
-proot-distro login ubuntu
-```
-
-Update repositories and install any package you want: 
-```
-apt update 
-apt upgrade
-
-apt install sudo nano adduser -y
-```
-
----  
-<br>
-
->  
-
-<br>
-
-<details>
-<summary><strong> Other desktosp (XFCE4, Mate, LXDE, etc) </strong></summary>
-<br>
-
-Follow the same [installation steps](https://github.com/LinuxDroidMaster/Termux-Desktops/blob/main/Documentation/proot/debian_proot.md#installing-desktops) as for Debian.
-
-</details>  
-
----  
-  
-
