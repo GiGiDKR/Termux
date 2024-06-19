@@ -1,4 +1,4 @@
-5# Termux
+# Termux
 ## 🏁 First steps <a name=first-steps></a>
 #### Install packages
 ```
@@ -82,19 +82,15 @@ sudo whoami
 
 </details>  
 
-
-## ⬇️ Download scripts easily: <a name=easy-download-ubuntu-proot></a> 
-* startgnome_ubuntu.sh
-```
-wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_ubuntu/startgnome_ubuntu.sh
-```
-
 <br>
 
 ## ⚙️ Installing Desktops <a name=installing-desktops></a> 
 
-<br>
+<details>
+<summary><strong> XFCE4 (Debian) </strong></summary>
 
+<br>
+<br>
 
 ```
 proot-distro login debian --user debian
@@ -103,16 +99,17 @@ proot-distro login debian --user debian
 sudo apt install xfce4 xfce4-terminal
 ```
 
+</details>
+
+
 
 <details>
-<summary><strong> GNOME </strong></summary>
+<summary><strong> GNOME (Ubuntu) </strong></summary>
 
 <br>
 <br>
-
 
 ```
-# Commands: 
 proot-distro login ubuntu --user droidmaster
 ```
 ```
@@ -143,11 +140,16 @@ sudo apt-get install firefox-esr
 ```
 
 Now you can run Ubuntu with GNOME UI from the script I left in the `Download scripts easily` section: 
+
+```
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_ubuntu/startgnome_ubuntu.sh
+```
 ```
 chmod +x startgnome_ubuntu.sh
-./startgnome_ubuntu.sh
+mv 
 ```
-</details
+</details>
+
 ## 💻 Running the Desktops for use with Termux X11 <a name=running-desktops></a>
 All the scripts in this repository are prepared to run the different Desktops with audio in an easy way. 
 
@@ -159,27 +161,59 @@ pkg install termux-x11-nightly
 pkg install pulseaudio
 ```
 
-Then, you just need to download the script corresponding to the Desktop you have installaded, give it permissions to execute it and run it (in Termux, not in proot-distro): 
+Script for start distro in Termux-X11 (with shortcut for Termux Widget and start with only distro name) : 
+
+<details>
+
+<summary><strong> Debian (XFCE4) </strong></summary>
+
+<br>
 
 ```
 wget https://raw.githubusercontent.com/GiGiDKR/Termux/main/scripts/proot_debian/startxfce4_debian.sh
 ```
 ```
 chmod +x startxfce4_debian.sh
-./startxfce4_debian.sh
+mv startxfce4_debian.sh Debian.sh
 ```
-Start Debian with debian command
-```
-cp ~/startxfce4_debian.sh $PREFIX/bin/debian && chmod +x $PREFIX/bin/debian
-```
-Create shortcut Debian 
 ```
 mkdir -p /data/data/com.termux/files/home/.shortcuts
 chmod 700 -R /data/data/com.termux/files/home/.shortcuts
 ```
 ```
-cp ~/startxfce4_debian.sh ~/.shortcuts/Debian.sh
+cp ~/Debian.sh ~/.shortcuts/Debian.sh
 ```
+```
+cp ~/Debian.sh $PREFIX/bin/debian && chmod +x $PREFIX/bin/debian
+```
+</details>
+
+
+<details>
+
+<summary><strong> Ubuntu (GNOME) </strong></summary>
+
+<br>
+
+```
+wget  https://raw.githubusercontent.com/GiGiDKR/Termux/main/scripts/proot_ubuntu/startgnome_ubuntu.sh
+```
+```
+chmod +x startgnome_ubuntu.sh
+mv startgnome_ubuntu.sh Ubuntu.sh
+```
+```
+mkdir -p /data/data/com.termux/files/home/.shortcuts
+chmod 700 -R /data/data/com.termux/files/home/.shortcuts
+```
+```
+cp ~/Ubuntu.sh ~/.shortcuts/Ubuntu.sh
+```
+```
+cp ~/Ubuntu.sh $PREFIX/bin/ubuntu && chmod +x $PREFIX/bin/ubuntu
+```
+
+</details>
 
 ## 🎨 Customizations <a name=customizations></a>
 
@@ -204,10 +238,15 @@ apt search icon-theme
 sudo apt install moka-icon-theme
 ```
 
-* Install GTK themes (system themes)
+* Install themes
 ```
 apt search gtk-themes
 sudo apt install numix-gtk-theme greybird-gtk-theme
+```
+```
+git clone https://github.com/addy-dclxvi/gtk-theme-collections ~/.themes
+rm -r -f ~/.themes/.git
+git clone https://github.com/addy-dclxvi/Xfwm4-Theme-Collections ~/.themes
 ```
 
 * Install alternative dock (bottom panel)
@@ -253,7 +292,7 @@ tar -xf pycharm-community-2024.1.3-aarch64.tar.gz
 cd pycharm-community-2024.1.3/bin
 bash pycharm.sh
 ```
-* Create desktop lancer
+* Create desktop launcher
 ```
 echo -e "[Desktop Entry]\nVersion=1.0\nType=Application\nName=Pycharm\nComment=\nExec=bash pycharm.sh\nIcon=pycharm\nPath=/home/debian/pycharm-community-2024.1.3/bin\nTerminal=false\nStartupNotify=false" > ~/Desktop/PyCharm.desktop
 ```
