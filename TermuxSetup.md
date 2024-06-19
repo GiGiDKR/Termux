@@ -52,34 +52,7 @@ initial_setup() {
     clear
     echo "${R} [${W}-${R}]${G} Configure Termux properties... "${W}
     echo -e "allow-external-apps = true\nuse-black-ui = true\nbell-character = ignore\n" > ~/.termux/termux.properties
-# http=//xcolors.net/dl/neon
-background=#171717
-foreground=#F8F8F8
-# black
-color0=#171717
-color8=#38252C
-# red
-color1=#D81765
-color9=#FF0000
-# green
-color2=#97D01A
-color10=#76B639
-# yellow
-color3=#FFA800
-color11=#E1A126
-# blue
-color4=#16B1FB
-color12=#289CD5
-# magenta
-color5=#FF2491
-color13=#FF2491
-# cyan
-color6=#0FDCB6
-color14=#0A9B81
-# white
-color7=#EBEBEB
-color15=#F8F8F8
-
+    echo -e "# http=//xcolors.net/dl/neon\nbackground=#171717\nforeground=#F8F8F8\n# black\ncolor0=#171717\ncolor8=#38252C\n# red\ncolor1=#D81765\ncolor9=#FF0000\n# green\ncolor2=#97D01A\ncolor10=#76B639\n# yellow\ncolor3=#FFA800\ncolor11=#E1A126\n# blue\ncolor4=#16B1FB\ncolor12=#289CD5\n# magenta\ncolor5=#FF2491\n\n\ncolor13=#FF2491\n# cyan\n\ncolor6=#0FDCB6\ncolor14=#0A9B81\n# white\ncolor7=#EBEBEB\ncolor15=#F8F8F8"  > ~/.termux/colors.properties
 }
 
 questions_customized() {
