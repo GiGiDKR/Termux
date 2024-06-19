@@ -82,15 +82,6 @@ sudo whoami
 
 </details>  
 
-## ⚙️ Installing Desktops <a name=installing-desktops></a> 
-
-
-```
-proot-distro login debian --user debian
-```
-```
-sudo apt install xfce4 xfce4-terminal
-```
 
 ## ⬇️ Download scripts easily: <a name=easy-download-ubuntu-proot></a> 
 * startgnome_ubuntu.sh
@@ -101,9 +92,18 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 ---  
 <br>
 
-# ⚙️ Installing Desktops <a name=installing-desktops-ubuntu-proot></a> 
+# ⚙️ Installing Desktops <a name=installing-desktops></a> 
 
 <br>
+
+
+```
+proot-distro login debian --user debian
+```
+```
+sudo apt install xfce4 xfce4-terminal
+```
+
 
 <details>
 <summary><strong> GNOME </strong></summary>
