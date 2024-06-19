@@ -92,7 +92,7 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 ---  
 <br>
 
-# ⚙️ Installing Desktops <a name=installing-desktops></a> 
+## ⚙️ Installing Desktops <a name=installing-desktops></a> 
 
 <br>
 
