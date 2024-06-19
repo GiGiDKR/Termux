@@ -49,6 +49,9 @@ initial_setup() {
     clear
     echo "${R} [${W}-${R}]${G} Installling Required Packages... "${W}
     package_install_and_check "wget git micro python"
+    clear
+    echo "${R} [${W}-${R}]${G} Configure Termux properties... "${W}
+    echo -e "allow-external-apps = true\nuse-black-ui = true\nbell-character = ignore\n" > ~/.termux/termux.properties
 }
 
 questions_customized() {
