@@ -63,6 +63,7 @@ questions_customized() {
 
 customized() {
     if [ "$answer_customized" == "y" ]; then
+    clear
     banner
     echo "${G}Setup Fish and Tide "${W}
     echo
@@ -164,6 +165,7 @@ setup_installer() {
 
 initial_setup
 questions_customized
+customized
 questions_prootdistro
 basic_task
 install_distro
