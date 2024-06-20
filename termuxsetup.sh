@@ -21,10 +21,10 @@ package_install_and_check() {
 	packs_list=($@)
 	for package_name in "${packs_list[@]}"; do
     echo "${R}[${W}-${R}]${G}${BOLD} Installing package: ${C}$package_name "${W}
-    pkg install "$package_name" -y >/dev/null
+    pkg install "$package_name" -y &>/dev/null
 	if [ $? -ne 0 ]; then
     apt --fix-broken install -y
-	dpkg --Configuring -a
+	dpkg --configuring -a
     fi
 	if dpkg -s "$package_name" >/dev/null 2>&1; then
     echo "${R}[${W}-${R}]${G} $package_name installed successfully "${W}
@@ -42,10 +42,10 @@ initial_setup() {
     banner
     echo "${R} [${W}-${R}]${G} Updating Termux... "${W}
     echo
-    pkg update -y >/dev/null
+    pkg update -y &>/dev/null
     clear
     echo "${R} [${W}-${R}]${G} Setting Up Storage... "${W}
-    termux-setup-Storage
+    termux-setup-storage
     clear
     echo "${R} [${W}-${R}]${G} Installling Required Packages... "${W}
     package_install_and_check "wget git micro python"
@@ -139,10 +139,10 @@ setup_installer() {
     distro_path="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs"
     echo "${G} Setup Installer... "${W}
     cd ~
-   wget -O $HOME/gnome-installer.sh https://raw.githubusercontent.com/GiGiDKR/Termux/main/install-gnome-desktop.sh
+   wget -O $HOME/gnome-installer.sh https://raw.githubusercontent.com/gigidkr/termux/main/install-gnome-desktop.sh
     setup_tx11
     if [[ ${answer_distro} == "1" ]]; then
-       mv gnome-installer.sh $distro_path/debian/root
+        mv gnome-installer.sh $distro_path/debian/root
         proot-distro login debian -- /bin/sh -c 'bash gnome-installer.sh'
     elif [[ ${answer_distro} == "2" ]]; then
         mv gnome-installer.sh $distro_path/ubuntu/root
