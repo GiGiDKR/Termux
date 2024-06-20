@@ -6,7 +6,7 @@
 <br>
 
 ```
-pkg update -y ; pkg install wget -y ; wget https://raw.githubusercontent.com//gigidkr/termux/main/termuxsetup.sh ; bash termuxsetup.sh 
+pkg update -y ; pkg install wget -y ; wget https://raw.githubusercontent.com/GiGiDKR/Termux/main/termuxsetup.sh ; bash termuxsetup.sh 
 
 ```
 </details>
