@@ -8,15 +8,14 @@ C="$(printf '\033[1;36m')"
 
 function banner() {
     clear
-	
-printf "\033[33m╭━━━╮╱╱╱╱╱╱╱╱╱╱╱╱╭━━╮╱╱╱╭━━━━╮\033[0m\n"
-printf "\033[33m┃╭━╮┃╱╱╱╱╱╱╱╱╱╱╱╱╰┫┣╯╱╱╱┃╭╮╭╮┃\033[0m\n"
-printf "\033[33m┃┃╱╰╋━╮╭━━┳╮╭┳━━╮╱┃┃╭━╮╱╰╯┃┃┣┻━┳━┳╮╭┳╮╭┳╮╭╮\033[0m\n"
-printf "\033[33m┃┃╭━┫╭╮┫╭╮┃╰╯┃┃━┫╱┃┃┃╭╮╮╱╱┃┃┃┃━┫╭┫╰╯┃┃┃┣╋╋╯\033[0m\n"
-printf "\033[33m┃╰┻━┃┃┃┃╰╯┃┃┃┃┃━┫╭┫┣┫┃┃┃╱╱┃┃┃┃━┫┃┃┃┃┃╰╯┣╋╋╮\033[0m\n"
-printf "\033[33m╰━━━┻╯╰┻━━┻┻┻┻━━╯╰━━┻╯╰╯╱╱╰╯╰━━┻╯╰┻┻┻━━┻╯╰╯\033[0m\n"
-echo "${C}${BOLD} Install Gnome Desktop In Termux ${W}"
-echo                                                    
+printf "\033[33m╭━━━━╮\033[0m\n"
+printf "\033[33m┃╭╮╭╮┃\033[0m\n"
+printf "\033[33m╰╯┃┃┣┻━┳━┳╮╭┳╮╭┳╮╭╮\033[0m\n"
+printf "\033[33m╱╱┃┃┃┃━┫╭┫╰╯┃┃┃┣╋╋╯\033[0m\n"
+printf "\033[33m╱╱┃┃┃┃━┫┃┃┃┃┃╰╯┣╋╋╮\033[0m\n"
+printf "\033[33m╱╱╰╯╰━━┻╯╰┻┻┻━━┻╯╰╯\033[0m\n"
+echo "${C}${BOLD} Full customized Termux setup with optionnal Linux environment"${W}
+echo                                                   
 }
 
 function package_install_and_check() {
