@@ -21,7 +21,7 @@ package_install_and_check() {
 	packs_list=($@)
 	for package_name in "${packs_list[@]}"; do
     echo "${R}[${W}-${R}]${G}${BOLD} Installing package: ${C}$package_name "${W}
-    pkg install "$package_name" -y
+    pkg install "$package_name" -y >/dev/null
 	if [ $? -ne 0 ]; then
     apt --fix-broken install -y
 	dpkg --Configuring -a
@@ -42,7 +42,7 @@ initial_setup() {
     banner
     echo "${R} [${W}-${R}]${G} Updating Termux... "${W}
     echo
-    pkg update -y
+    pkg update -y >/dev/null
     clear
     echo "${R} [${W}-${R}]${G} Setting Up Storage... "${W}
     termux-setup-Storage
@@ -52,8 +52,6 @@ initial_setup() {
     clear
     echo "${R} [${W}-${R}]${G} Configure Termux properties... "${W}
     echo -e "allow-external-apps = true\nuse-black-ui = true\nbell-character = ignore\n" > ~/.termux/termux.properties
-    echo -e "# http=//xcolors.net/dl/neon\nbackground=#171717\nforeground=#F8F8F8\n# black\ncolor0=#171717\ncolor8=#38252C\n# red\ncolor1=#D81765\ncolor9=#FF0000\n# green\ncolor2=#97D01A\ncolor10=#76B639\n# yellow\ncolor3=#FFA800\ncolor11=#E1A126\n# blue\ncolor4=#16B1FB\ncolor12=#289CD5\n# magenta\ncolor5=#FF2491\n\n\ncolor13=#FF2491\n# cyan\n\ncolor6=#0FDCB6\ncolor14=#0A9B81\n# white\ncolor7=#EBEBEB\ncolor15=#F8F8F8"  > ~/.termux/colors.properties
-}
 
 questions_customized() {
     banner
@@ -102,7 +100,7 @@ basic_task() {
     banner
     echo "${R} [${W}-${R}]${G} Updating Termux... "${W}
     echo
-    pkg update -y
+    pkg update -y >/dev/null
     clear
     echo "${R} [${W}-${R}]${G} Installling Required Packages... "${W}
     package_install_and_check "proot proot-distro pulseaudio"
