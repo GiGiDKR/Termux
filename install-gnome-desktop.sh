@@ -426,11 +426,11 @@ banner
     cd WhiteSur-wallpapers
     sudo ./install-gnome-backgrounds.sh
     ./install-wallpapers.sh
-clear
-     echo -e "${G} Install OpenJDK, Python & PyCharm"${W}
-     package_install_and_check "openjdk-17-jdk python3-full"
-     wget https://download.jetbrains.com/python/pycharm-community-2024.1.3-aarch64.tar.gz
-tar -xf pycharm-community-2024.1.3-aarch64.tar.gz
+    clear
+    echo -e "${G} Install OpenJDK, Python & PyCharm"${W}
+    package_install_and_check "openjdk-17-jdk python3-full"
+    wget https://download.jetbrains.com/python/pycharm-community-2024.1.3-aarch64.tar.gz
+    tar -xf pycharm-community-2024.1.3-aarch64.tar.gz
 }
 
 function note() {
