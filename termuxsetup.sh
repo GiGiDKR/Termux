@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/bash
+k#!/data/data/com.termux/files/usr/bin/bash
 R="$(printf '\033[1;31m')"
 G="$(printf '\033[1;32m')"
 Y="$(printf '\033[1;33m')"
@@ -139,7 +139,7 @@ setup_installer() {
     distro_path="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs"
     echo "${G} Setup Installer... "${W}
     cd ~
-   wget -O $HOME/gnome-installer.sh https://raw.githubusercontent.com/gigidkr/termux/main/install-gnome-desktop
+   wget -O $HOME/gnome-installer.sh https://raw.githubusercontent.com/GiGiDKR/Termux/main/install-gnome-desktop
     setup_tx11
     if [[ ${answer_distro} == "1" ]]; then
         mv gnome-installer.sh $distro_path/debian/root
