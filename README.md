@@ -1,4 +1,4 @@
-# Termux
+5# Termux
 
 <details>
 <summary><strong> Interactive installation  </strong></summary>
@@ -271,8 +271,8 @@ rm -rf README.md
 rm -rf LICENCE
 rm -rf *.jpg
 cd ..
-mv gtk-theme-collection/* ./
-rm gtk-theme-collection
+mv gtk-theme-collections/* ./
+rm gtk-theme-collections
 ```
 ```
 git clone https://github.com/addy-dclxvi/Xfwm4-Theme-Collections.git
@@ -282,8 +282,8 @@ rm -rf README.md
 rm -rf LICENCE
 rm -rf *.jpg
 cd .. ~/.themes
-mv Xfwm4-Theme-cillections/* ./
-rm Xfwm4-Theme-cillections
+mv Xfwm4-Theme-Collections/* ./
+rm Xfwm4-Theme-Collections
 ```
 
 * Install alternative dock (bottom panel)
