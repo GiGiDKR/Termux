@@ -242,16 +242,13 @@ bash -c  "$(curl -fsSL https://raw.githubusercontent.com/officialrajdeepsingh/ne
 * Whisker menu and MugShot (to improve default desktop default menu) 
 
 ```
-sudo apt install xfce4-whiskermenu-plugin
-```
-```
-sudo apt install mugshot
+sudo apt install xfce4-whiskermenu-plugin mugshot
 ```
 
 * Install icon themes: 
 ```
 apt search icon-theme
-sudo apt install moka-icon-theme
+sudo apt install moka-icon-theme papirus-icon-theme
 ```
 
 * Install themes
@@ -262,6 +259,7 @@ sudo apt install numix-gtk-theme greybird-gtk-theme
 ```
 mkdir ~/.themes
 chmod +x ~/.themes
+cd ~/.themes
 ```
 ```
 git clone https://github.com/addy-dclxvi/gtk-theme-collections.git
@@ -272,7 +270,7 @@ rm -rf LICENCE
 rm -rf *.jpg
 cd ..
 mv gtk-theme-collections/* ./
-rm gtk-theme-collections
+rm -rf gtk-theme-collections
 ```
 ```
 git clone https://github.com/addy-dclxvi/Xfwm4-Theme-Collections.git
@@ -283,7 +281,7 @@ rm -rf LICENCE
 rm -rf *.jpg
 cd .. ~/.themes
 mv Xfwm4-Theme-Collections/* ./
-rm Xfwm4-Theme-Collections
+rm -rf Xfwm4-Theme-Collections
 ```
 
 * Install alternative dock (bottom panel)
