@@ -272,7 +272,7 @@ rm -rf LICENCE
 rm -rf *.jpg
 cd ..
 mv gtk-theme-collection/* ./
-rm 
+rm gtk-theme-collection
 ```
 ```
 git clone https://github.com/addy-dclxvi/Xfwm4-Theme-Collections.git
@@ -283,6 +283,7 @@ rm -rf LICENCE
 rm -rf *.jpg
 cd .. ~/.themes
 mv Xfwm4-Theme-cillections/* ./
+rm Xfwm4-Theme-cillections
 ```
 
 * Install alternative dock (bottom panel)
