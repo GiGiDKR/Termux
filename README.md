@@ -260,9 +260,29 @@ apt search gtk-themes
 sudo apt install numix-gtk-theme greybird-gtk-theme
 ```
 ```
-git clone https://github.com/addy-dclxvi/gtk-theme-collections ~/.themes
-rm -r -f ~/.themes/.git
-git clone https://github.com/addy-dclxvi/Xfwm4-Theme-Collections ~/.themes
+mkdir ~/.themes
+chmod +x ~/.themes
+```
+```
+git clone https://github.com/addy-dclxvi/gtk-theme-collections.git
+```
+```
+rm -rf README.md
+rm -rf LICENCE
+rm -rf *.jpg
+cd ..
+mv gtk-theme-collection/* ./
+rm 
+```
+```
+git clone https://github.com/addy-dclxvi/Xfwm4-Theme-Collections.git
+```
+```
+rm -rf README.md
+rm -rf LICENCE
+rm -rf *.jpg
+cd .. ~/.themes
+mv Xfwm4-Theme-cillections/* ./
 ```
 
 * Install alternative dock (bottom panel)
