@@ -1,4 +1,4 @@
-e# Termux
+# Termux
 
 <details>
 <summary><strong> Interactive installation  </strong></summary>
@@ -361,11 +361,7 @@ tar -xf pycharm-community-2024.1.3-aarch64.tar.gz
 rm pycharm-community-2024.1.3-aarch64.tar.gz
 mv pycharm-community-2024.1.3 ~/.local/share/
 ```
-* Run Pycharm
-```
-cd pycharm-community-2024.1.3/bin
-bash pycharm.sh
-```
+
 * Create desktop launcher
 ```
 echo -e "[Desktop Entry]\nVersion=1.0\nType=Application\nName=Pycharm\nComment=\nExec=bash pycharm.sh\nIcon=pycharm\nPath=/home/debian/.local/share/pycharm-community-2024.1.3/bin\nTerminal=false\nStartupNotify=true" > ~/PyCharm.desktop
@@ -376,8 +372,6 @@ echo -e "[Desktop Entry]\nVersion=1.0\nType=Application\nName=Pycharm\nComment=\
 * Install Chromium
 ```
 sudo apt install chromium
-```
-```
 echo -e "[Desktop Entry]\nVersion=1.0\nName=Chromium Web Browser\nnExec=/usr/bin/chromium %U --no-sandbox\nnTerminal=false\nnX-MultipleArgs=false\nnType=Application\nIcon=chromium\nnCategories=Network;WebBrowser;\nMimeType=text/html;text/xml;application/xhtml_xml;application/x-mimearchive;x-scheme-handler/http;x-scheme-handler/https;\nnStartupWMClass=chromium\nnStartupNotify=true\nnKeywords=browser" > ~/ Chromium.desktop
 ```
 
