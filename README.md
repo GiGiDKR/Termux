@@ -355,9 +355,9 @@ sudo apt install python3-full
 * Download and install Pycharm
 ```
 wget https://download.jetbrains.com/python/pycharm-community-2024.1.3-aarch64.tar.gz
-```
-```
 tar -xf pycharm-community-2024.1.3-aarch64.tar.gz
+```
+```
 rm pycharm-community-2024.1.3-aarch64.tar.gz
 mv pycharm-community-2024.1.3 ~/.local/share/
 ```
