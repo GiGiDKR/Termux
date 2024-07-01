@@ -1,4 +1,4 @@
-5# Termux
+# Termux
 
 <details>
 <summary><strong> Interactive installation  </strong></summary>
@@ -291,6 +291,41 @@ sudo apt install plank
 ```
 plank --preferences
 ```
+
+* Install Starship (Shell Prompt)
+```
+curl -sS https://starship.rs/install.sh | sh
+```
+```
+starship preset pastel-powerline -o ~/.config/starship.toml
+```
+```
+micro ~/.bashrc
+```
+Add at the end of .bashrc file :
+```
+# Custom alias
+alias l='ls'
+alias ls='ls -la'
+alias q='exit'
+alias c='clear'
+
+#Set Starship at default prompt
+eval "$(starship init bash)"
+
+```
+
+* Install Ulauncher
+```
+sudo apt update && sudo apt install -y gnupg
+gpg --keyserver keyserver.ubuntu.com --recv 0xfaf1020699503176
+gpg --export 0xfaf1020699503176 | sudo tee /usr/share/keyrings/ulauncher-archive-keyring.gpg > /dev/null
+echo "deb [signed-by=/usr/share/keyrings/ulauncher-archive-keyring.gpg] \
+          http://ppa.launchpad.net/agornostal/ulauncher/ubuntu jammy main" \
+          | sudo tee /etc/apt/sources.list.d/ulauncher-jammy.list
+sudo apt update && sudo apt install ulauncher
+```
+
 
 * Install Conky (desktop widgets)
 ```
