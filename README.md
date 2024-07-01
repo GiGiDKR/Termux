@@ -1,4 +1,4 @@
-# Termux
+e# Termux
 
 <details>
 <summary><strong> Interactive installation  </strong></summary>
@@ -292,7 +292,7 @@ sudo apt install plank
 plank --preferences
 ```
 
-* Install Starship (Shell Prompt)
+* Install Starship (shell prompt)
 ```
 curl -sS https://starship.rs/install.sh | sh
 ```
@@ -312,7 +312,6 @@ alias c='clear'
 
 #Set Starship at default prompt
 eval "$(starship init bash)"
-
 ```
 
 * Install Ulauncher
