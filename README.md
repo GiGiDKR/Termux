@@ -1,4 +1,4 @@
-# Termux
+#  🖌 TERMUX custom 💻 LINUX distrib install
 
 <details>
 <summary><strong> Interactive installation  </strong></summary>
@@ -43,18 +43,15 @@ echo fish | tee -a /etc/shells
 chsh -s fish
 ```
 ```
-fish -c "set -U fish_greeting"
-```
-```
 echo -e "if status is-interactive\n# Commands to run in interactive sessions can go here\nend\n\nabbr -a l ls\nabbr -a q exit\nabbr -a c clear\nabbr -a ls ls -la\n" > ~/.config/fish/config.fish
 ```
 ```
 rm /data/user/0/com.termux/files/usr/etc/motd
 ```
-```
-fish -c "tide configure"
-```
 
+Delete message at startup : `fish -c "set -U fish_greeting"`
+
+Configure Tide with : `fish -c "tide configure"`
 
 
 #### Install proot-disto
@@ -239,12 +236,6 @@ cp ~/Ubuntu.sh $PREFIX/bin/ubuntu && chmod +x $PREFIX/bin/ubuntu
 bash -c  "$(curl -fsSL https://raw.githubusercontent.com/officialrajdeepsingh/nerd-fonts-installer/main/install.sh)"
 ```
 
-* Whisker menu and MugShot (to improve default desktop default menu) 
-
-```
-sudo apt install xfce4-whiskermenu-plugin mugshot
-```
-
 * Install icon themes: 
 ```
 apt search icon-theme
@@ -284,13 +275,26 @@ mv Xfwm4-Theme-Collections/* ./
 rm -rf Xfwm4-Theme-Collections
 ```
 
+### Panel and Status bar
+
+* Whisker menu and MugShot (to improve default desktop default menu) 
+
+```
+sudo apt install xfce4-whiskermenu-plugin mugshot
+```
+
+* Install status bar
+```
+sudo apt install polybar
+```
+
 * Install alternative dock (bottom panel)
 ```
 sudo apt install plank
 ```
-```
-plank --preferences
-```
+Configure with : `plank --preferences`
+
+### Shell
 
 * Install Starship (shell prompt)
 ```
@@ -309,10 +313,30 @@ alias l='ls'
 alias ls='ls -la'
 alias q='exit'
 alias c='clear'
+alias install='sudo apt install'
+alias upgrade='sudo apt upgrade'
+alias update='sudo apt update'
+alias remove='sudo apt remove'
 
 #Set Starship at default prompt
 eval "$(starship init bash)"
 ```
+
+* Install Fish (alternatve shell) and Tide (Fish prompt)
+
+```
+fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
+fish -c "fisher install IlanCosman/tide@v6"
+```
+```
+fish -c "set -U fish_greeting"
+```
+```
+echo -e "if status is-interactive\n# Commands to run in interactive sessions can go here\nend\n\nabbr -a l ls\nabbr -a q exit\nabbr -a c clear\nabbr -a ls ls -la\n" > ~/.config/fish/config.fish
+```
+Configure Tide with : `fish -c "tide configure"`
+
+### Launcher
 
 * Install Ulauncher
 ```
@@ -324,10 +348,14 @@ echo "deb [signed-by=/usr/share/keyrings/ulauncher-archive-keyring.gpg] \
           | sudo tee /etc/apt/sources.list.d/ulauncher-jammy.list
 sudo apt update && sudo apt install ulauncher
 ```
-```
-ulauncher
-```
 
+Start with : `ulauncher`
+
+* Install Rofi
+
+```bash
+apt install rofi
+```
 
 * Install Conky (desktop widgets)
 ```
