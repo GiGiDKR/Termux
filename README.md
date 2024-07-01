@@ -324,6 +324,9 @@ echo "deb [signed-by=/usr/share/keyrings/ulauncher-archive-keyring.gpg] \
           | sudo tee /etc/apt/sources.list.d/ulauncher-jammy.list
 sudo apt update && sudo apt install ulauncher
 ```
+```
+ulauncher
+```
 
 
 * Install Conky (desktop widgets)
