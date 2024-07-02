@@ -1,21 +1,7 @@
-#  🖌 TERMUX custom 💻 LINUX distrib install
+# TERMUX Custom🖌 
 
-<details>
-<summary><strong> Interactive installation  </strong></summary>
-
-<br>
-
-```
-pkg update -y ; pkg install wget -y ; wget https://raw.githubusercontent.com/GiGiDKR/Termux/main/termuxsetup.sh ; bash termuxsetup.sh 
-
-```
-</details>
-
-****
-
-<strong> Manual installation  </strong>
-
-## 🏁 First steps <a name=first-steps></a>
+###### Work in progress
+# 🏁 First steps <a name=first-steps></a>
 #### Install packages
 ```
 pkg update -y
@@ -163,6 +149,24 @@ mv
 ```
 </details>
 
+<br>
+
+*****
+
+<details>
+<summary><strong> Interactive installation  </strong></summary>
+<br>
+
+```
+pkg update -y ; pkg install wget -y ; wget https://raw.githubusercontent.com/GiGiDKR/Termux/main/termuxsetup.sh ; bash termuxsetup.sh 
+
+```
+</details>
+
+*****
+<br>
+
+
 ## 💻 Running the Desktops for use with Termux X11 <a name=running-desktops></a>
 All the scripts in this repository are prepared to run the different Desktops with audio in an easy way. 
 
@@ -228,8 +232,11 @@ cp ~/Ubuntu.sh $PREFIX/bin/ubuntu && chmod +x $PREFIX/bin/ubuntu
 
 </details>
 
+<br>
+
 ## 🎨 Customizations <a name=customizations></a>
 
+### Fonts and Themes
 
 * How to install nerd fonts (this allows you to have icons in the terminal):
 ```
@@ -370,7 +377,11 @@ sudo apt install xfce4-whiskermenu-plugin mugshot moka-icon-theme numix-gtk-them
 ```
 </details>
 
-## Pycharm <a name=pycharm></a>
+<br>
+
+## 🖥️ Softwares <a name=softwrarse></a>
+
+### Pycharm
 
 * Install Java
 ```
@@ -395,7 +406,7 @@ mv pycharm-community-2024.1.3 ~/.local/share/
 echo -e "[Desktop Entry]\nVersion=1.0\nType=Application\nName=Pycharm\nComment=\nExec=bash pycharm.sh\nIcon=pycharm\nPath=/home/debian/.local/share/pycharm-community-2024.1.3/bin\nTerminal=false\nStartupNotify=true" > ~/PyCharm.desktop
 ```
 
-## Web Browser <a name=webbrowser></a>
+### Web Browser
 
 * Install Chromium
 ```
