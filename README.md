@@ -12,7 +12,7 @@ pkg upgrade -y
 termux-setup-storage
 ```
 ```
-mkdir ~/.termux/ ;echo -e "allow-external-apps = true\nuse-black-ui = true\nbell-character = ignore\n\nextra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" >> ~/.termux/termux.properties; termux-reload-properties;
+mkdir ~/.termux/ ;echo -e "allow-external-apps = true\nuse-black-ui = true\nbell-character = ignore\n\nextra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" > ~/.termux/termux.properties; termux-reload-settings;
 ```
 ```
 pkg install wget git micro python fish -y
