@@ -12,7 +12,7 @@ pkg upgrade -y
 termux-setup-storage
 ```
 ```
-echo -e "allow-external-apps = true\nuse-black-ui = true\nbell-character = ignore\n" > ~/.termux/termux.properties
+mkdir ~/.termux/ ;echo -e "allow-external-apps = true\nuse-black-ui = true\nbell-character = ignore\n\nextra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" >> ~/.termux/termux.properties; termux-reload-properties;
 ```
 ```
 pkg install wget git micro python fish -y
@@ -29,7 +29,7 @@ echo fish | tee -a /etc/shells
 chsh -s fish
 ```
 ```
-echo -e "if status is-interactive\n# Commands to run in interactive sessions can go here\nend\n\nabbr -a l ls\nabbr -a q exit\nabbr -a c clear\nabbr -a ls ls -la\n" > ~/.config/fish/config.fish
+echo -e "if status is-interactive\n# Commands to run in interactive sessions can go here\nend\n\n# Custom alias\nabbr -a l ls\nabbr -a ls ls -a\nabbr -a q exit\nabbr -a c clear\nabbr -a update "pkg update -y && pkg upgrade -y"\nabbr -a upd "pkg update -y"\nabbr -a upg "pkg upgrade -y"\nabbr -a in pkg install\abbr -a un pkg uninstall\nabbr -a py python!\nabbr -a pipin "pip install --upgrade"\nabbr -a m micro\nabbr -a s source\aabbr -a ex exec\abbr -a f fish\nabbr -a b bash\nabbr -a md mkdir\nabbr -a alias "micro ~/.config/fish/config.fish"\nabbr -a conf "cd ~/.config"\nabbr -a "?" pwd\nabbr -a ip ifconfig\nabbr -a termux "micro ~/.termux/termux.properties"\nabbr -a venv "source ./venv/bin/activate.fish"" > ~/.config/fish/config.fish; exec fish;
 ```
 ```
 rm /data/user/0/com.termux/files/usr/etc/motd
