@@ -263,6 +263,7 @@ cd ~/.themes
 git clone https://github.com/addy-dclxvi/gtk-theme-collections.git
 ```
 ```
+cd gtk-theme-collections
 rm -rf README.md
 rm -rf LICENCE
 rm -rf *.jpg
@@ -274,10 +275,11 @@ rm -rf gtk-theme-collections
 git clone https://github.com/addy-dclxvi/Xfwm4-Theme-Collections.git
 ```
 ```
+cd Xfwm4-Theme-Collections
 rm -rf README.md
 rm -rf LICENCE
 rm -rf *.jpg
-cd .. ~/.themes
+cd ..
 mv Xfwm4-Theme-Collections/* ./
 rm -rf Xfwm4-Theme-Collections
 ```
