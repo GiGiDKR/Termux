@@ -46,7 +46,7 @@ Configure Tide with : `fish -c "tide configure"`
 pkg update
 pkg install proot-distro
 ```
-Install Debian (or the distor you prefer)
+Install Debian (or other distro)
 ```
 proot-distro install debian
 ```
@@ -55,7 +55,7 @@ Log in to the distro
 proot-distro login debian
 ```
 
-#### Create an user with sudo privileges
+#### Create user with sudo privileges
 
 Install needed packages
 ```
@@ -64,7 +64,7 @@ apt install sudo micro adduser -y
 ```
 Create an user
 ```
-adduser debian
+adduser admin
 ```
 Give the user sudo privileges
 ```
@@ -72,9 +72,9 @@ micro /etc/sudoers
 ```
 Add the following line to the file
 ```
-debian ALL=(ALL:ALL) ALL
+admin ALL=(ALL:ALL) ALL
 ```
-Check you can execute sudo commands (it should return `root`)
+Check you can execute sudo commands
 ```
 sudo whoami 
 ```  
@@ -92,7 +92,7 @@ sudo whoami
 <br>
 
 ```
-proot-distro login debian --user debian
+proot-distro login debian --user admin
 ```
 ```
 sudo apt install xfce4 xfce4-terminal
