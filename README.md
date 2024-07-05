@@ -170,7 +170,16 @@ pkg update -y ; pkg install wget -y ; wget https://raw.githubusercontent.com/GiG
 ## 💻 Running the Desktops for use with Termux X11 <a name=running-desktops></a>
 All the scripts in this repository are prepared to run the different Desktops with audio in an easy way. 
 
-First you need to install the following packages in Termux: 
+
+### Install Termux-X11
+
+```
+wget https://github.com/termux/termux-x11/releases/download/nightly/app-arm64-v8a-debug.apk
+mv app-arm64-v8a-debug.apk $HOME/storage/downloads/
+termux-open $HOME/storage/downloads/app-arm64-v8a-debug.apk
+```
+
+You need to install the following packages in Termux: 
 ```
 pkg update
 pkg install x11-repo
@@ -405,7 +414,9 @@ mv pycharm-community-2024.1.3 ~/.local/share/
 
 * Create desktop launcher
 ```
-echo -e "[Desktop Entry]\nVersion=1.0\nType=Application\nName=Pycharm\nComment=\nExec=bash pycharm.sh\nIcon=pycharm\nPath=/home/admin/.local/share/pycharm-community-2024.1.3/bin\nTerminal=false\nStartupNotify=true" > ~/PyCharm.desktop
+echo -e "[Desktop Entry]\nVersion=1.0\nType=Application\nName=Pycharm\nComment=\nExec=bash pycharm.sh\nIcon=pycharm\nPath=$HOME/.local/share/pycharm-community-2024.1.3/bin\nTerminal=false\nStartupNotify=true" > $HOME/Desktop/pycharm.desktop
+chmod +x $HOME/Desktop/pycharm.desktop
+mv $HOME/Desktop/pycharm.desktop $HOME/../usr/share/applications
 ```
 
 ### Web Browser
@@ -413,7 +424,8 @@ echo -e "[Desktop Entry]\nVersion=1.0\nType=Application\nName=Pycharm\nComment=\
 * Install Chromium
 ```
 sudo apt install chromium
-echo -e "[Desktop Entry]\nVersion=1.0\nName=Chromium Web Browser\nnExec=/usr/bin/chromium %U --no-sandbox\nnTerminal=false\nnX-MultipleArgs=false\nnType=Application\nIcon=chromium\nnCategories=Network;WebBrowser;\nMimeType=text/html;text/xml;application/xhtml_xml;application/x-mimearchive;x-scheme-handler/http;x-scheme-handler/https;\nnStartupWMClass=chromium\nnStartupNotify=true\nnKeywords=browser" > ~/ Chromium.desktop
+echo -e "[Desktop Entry]\nVersion=1.0\nName=Chromium Web Browser\nnExec=/usr/bin/chromium %U --no-sandbox\nnTerminal=false\nnX-MultipleArgs=false\nnType=Application\nIcon=chromium\nnCategories=Network;WebBrowser;\nMimeType=text/html;text/xml;application/xhtml_xml;application/x-mimearchive;x-scheme-handler/http;x-scheme-handler/https;\nnStartupWMClass=chromium\nnStartupNotify=true\nnKeywords=browser" > $HOME/chromium.desktop
+mv $HOME/Desktop/chromium.desktop $HOME/../usr/share/applications
 ```
 
 * Install Firefox 
@@ -442,6 +454,15 @@ pkg install chromium -y
 pkg install tur-repo -y
 pkg install code-oss -y
 ```
+```
+pkg install polybar -y
+cp $HOME/../usr//etc/polybar/config.ini ~/.config/polybar/config.ini
+```
+```
+pkg install rofi -y
+```
+
+
 
 ## ⬇️ Download scripts: <a name=easy-download-termux></a> 
 ```
