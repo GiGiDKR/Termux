@@ -392,6 +392,14 @@ sudo apt install xfce4-whiskermenu-plugin mugshot moka-icon-theme numix-gtk-them
 
 ## 🖥️ Softwares <a name=softwrarse></a>
 
+### App Installer Utility
+
+```
+git clone https://github.com/phoenixbyrd/App-Installer.git
+mv $HOME/App-Installer $HOME/.App-Installer
+chmod +x $HOME/.App-Installer/*
+```
+
 ### Pycharm
 
 * Install Java
