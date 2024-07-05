@@ -38,29 +38,30 @@ echo fish | tee -a /etc/shells
 chsh -s fish
 
 echo "
-# Custom alias '
-abbr -a l ls '
-abbr -a ls ls -a '
-abbr -a q exit '
-abbr -a c clear '
-abbr -a update "pkg update -y && pkg upgrade -y" '
-abbr -a upd "pkg update -y '
-nabbr -a upg "pkg upgrade -y" '
-abbr -a in pkg install '
-abbr -a un pkg uninstall '
-abbr -a py python! '
-abbr -a pipin "pip install --upgrade" '
-abbr -a m micro\nabbr -a s source '
-abbr -a ex exec '
-abbr -a f fish '
-abbr -a b bash '
-abbr -a md mkdir '
-abbr -a alias "micro ~/.config/fish/config.fish" '
-abbr -a conf "cd ~/.config" '
-abbr -a "?" pwd '
-abbr -a ip ifconfig '
-abbr -a termux "micro ~/.termux/termux.properties" '
-abbr -a venv "source ./venv/bin/activate.fish" '
+# Custom alias
+abbr -a l ls
+abbr -a ls ls -a
+abbr -a q exit
+abbr -a c clear
+abbr -a update 'pkg update -y && pkg upgrade -y'
+abbr -a upd pkg update -y
+nabbr -a upg pkg upgrade -y
+abbr -a in pkg install
+abbr -a un pkg uninstall
+abbr -a py python
+abbr -a pipin 'pip install --upgrade'
+abbr -a m micro
+abbr -a s source
+abbr -a ex exec
+abbr -a f fish
+abbr -a b bash
+abbr -a md mkdir
+abbr -a alias 'micro ~/.config/fish/config.fish'
+abbr -a conf 'cd ~/.config'
+abbr -a '?' pwd
+abbr -a ip ifconfig
+abbr -a termux 'micro ~/.termux/termux.properties'
+abbr -a venv 'source ./venv/bin/activate.fish'
 " >> $HOME/.config/fish/config.fish
 
 exec fish
