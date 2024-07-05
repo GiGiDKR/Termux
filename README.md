@@ -420,3 +420,51 @@ echo -e "[Desktop Entry]\nVersion=1.0\nName=Chromium Web Browser\nnExec=/usr/bin
 ```
 sudo apt install firefox-esr firefox-esr-l10n-fr
 ```
+
+-----
+
+# TERMUX native desktop 
+
+```
+pkg update -y
+pkg install x11-repo -y
+pkg install termux-x11-nightly -y
+pkg install pulseaudio -y
+```
+```
+pkg install xfce4 -y
+```
+```
+pkg install tur-repo -y
+pkg install chromium -y
+```
+```
+pkg install tur-repo -y
+pkg install code-oss -y
+```
+
+## ⬇️ Download scripts: <a name=easy-download-termux></a> 
+```
+pkg install wget -y
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/termux_native/startxfce4_termux.sh
+```
+```
+chmod +x ~/startxfce4_termux.sh
+mv ~/startxfce4_termux.sh ~/xfce4.sh
+```
+
+## ⬇️ Setup folders
+```
+mkdir $HOME/Desktop 
+mkdir $HOME/Downloads 
+mkdir $HOME/Templates 
+mkdir $HOME/Public 
+mkdir $HOME/Documents 
+mkdir $HOME/Pictures 
+mkdir $HOME/Videos 
+termux-setup-storage
+```
+```
+ln -s $HOME/storage/music Music
+ln -s $HOME/storage/document Documents
+```
