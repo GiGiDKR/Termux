@@ -405,7 +405,7 @@ mv pycharm-community-2024.1.3 ~/.local/share/
 
 * Create desktop launcher
 ```
-echo -e "[Desktop Entry]\nVersion=1.0\nType=Application\nName=Pycharm\nComment=\nExec=bash pycharm.sh\nIcon=pycharm\nPath=/home/debian/.local/share/pycharm-community-2024.1.3/bin\nTerminal=false\nStartupNotify=true" > ~/PyCharm.desktop
+echo -e "[Desktop Entry]\nVersion=1.0\nType=Application\nName=Pycharm\nComment=\nExec=bash pycharm.sh\nIcon=pycharm\nPath=/home/admin/.local/share/pycharm-community-2024.1.3/bin\nTerminal=false\nStartupNotify=true" > ~/PyCharm.desktop
 ```
 
 ### Web Browser
