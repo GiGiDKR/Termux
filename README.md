@@ -471,21 +471,32 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 ```
 ```
 chmod +x ~/startxfce4_termux.sh
-mv ~/startxfce4_termux.sh ~/xfce4.sh
+mv ~/startxfce4_termux.sh ~/TermuxDesktop.sh
+```
+```
+mkdir -p /data/data/com.termux/files/home/.shortcuts
+chmod 700 -R /data/data/com.termux/files/home/.shortcuts
+```
+```
+cp ~/TermuxDesktop.sh ~/.shortcuts/TermuxDesktop.sh
+```
+```
+cp ~/TermuxDesktop.sh $PREFIX/bin/debian && chmod +x $PREFIX/bin/termuxdesktop
 ```
 
 ## ⬇️ Setup folders
 ```
-mkdir $HOME/Desktop 
-mkdir $HOME/Downloads 
-mkdir $HOME/Templates 
-mkdir $HOME/Public 
-mkdir $HOME/Documents 
-mkdir $HOME/Pictures 
-mkdir $HOME/Videos 
+mkdir $HOME/Desktop
+mkdir $HOME/Templates
+mkdir $HOME/Public
+mkdir $HOME/Pictures
+mkdir $HOME/Videos
+```
+```
 termux-setup-storage
 ```
 ```
 ln -s $HOME/storage/music Music
 ln -s $HOME/storage/document Documents
+ln -s $HOME/storage/downloads Downloads
 ```
